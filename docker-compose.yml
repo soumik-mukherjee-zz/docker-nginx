@@ -8,7 +8,7 @@ services:
     networks:
       - docker_nginx
     volumes:
-      - ./conf/nginx:/etc/nginx/
+      - ./nginx/conf:/etc/nginx/
 networks:
   docker_nginx:
     driver: bridge
