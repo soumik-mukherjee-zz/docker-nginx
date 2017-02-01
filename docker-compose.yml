@@ -1,0 +1,15 @@
+version: '2'
+
+services:
+  nginx:
+    build: nginx/
+    ports:
+      - "80:80"
+    environment:
+    networks:
+      - docker_nginx
+    volumes:
+      - ./conf/nginx:/etc/nginx/
+networks:
+  docker_nginx:
+    driver: bridge
